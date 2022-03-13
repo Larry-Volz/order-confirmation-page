@@ -18,10 +18,10 @@ body, html {
     justify-content: center; */
 
     background: url("img/ZigZag.png");
-    /* background-size: cover; */
+    background-size: cover;
 }
 
-h2, h5, h6 {
+h2, h5, h6, button {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -33,9 +33,8 @@ h2, h5 {
 }
 
 .inner-floating-box {
-    width: 90%;
-    min-width: 300px;
-    height: 700px;
+    width: 300px;
+    height: 600px;
     margin: 70px auto;
     background-color: white;
     box-shadow: 0px 40px 40px -20px;
@@ -130,6 +129,76 @@ a {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     font-size: 12px;
+}
+
+.btn-box {
+    display: flex;
+    position: relative;
+    margin-top: 40px;
+}
+button {
+    width: 85%;
+    padding: 15px 0;
+    font-weight: 600;
+    font-size: 15px;
+
+    /* this doesn't work because?... */
+    /* justify-content: center; */
+
+    /* center by using position */
+    /* position:absolute;
+    left: 50%;
+    transform: translateX(-50%); */
+
+    margin: auto;
+
+    background-color: #46A67E;
+    border: none;
+    border-radius: 5px;
+    color: white;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: .3s ease all;
+
+}
+
+button:hover {
+    opacity: 0.8;
+    transition: .3s ease all;
+    cursor: pointer;
+}
+
+.nav-circles {
+    width: 15%;
+    /* side-by-side -> think flex */
+    display: flex;
+    justify-content: space-between;
+
+    /* to center whole box and contents */
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    transform: translateX(-50%);
+}
+
+.circle {
+    background-color: #46A67E;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin: 10px;
+    margin-top: 50px;
+}
+
+.circle:nth-of-type(1) {
+    opacity: 50%;
+}
+.circle:nth-of-type(2) {
+    
+}
+.circle:nth-of-type(3) {
+    opacity: 50%;
 }
 
 
