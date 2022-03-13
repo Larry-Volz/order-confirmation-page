@@ -30,9 +30,16 @@ h2, h5 {
 }
 
 .outer-container {
+    display: flex;
+    /* justify-content: space-between; */
+
 }
 
-.inner-floating-box {
+.left-floating-box, .right-floating-box {
+    display: none;
+}
+
+.inner-floating-box, .left-floating-box, .right-floating-box {
     width: 300px;
     height: 600px;
     margin: 70px auto;
@@ -55,11 +62,18 @@ h2, h5 {
 }
 
 .icon-image {
-    /* background-color: blue; */
-    background: url("img/food-happy.png") no-repeat center center;
-    height: 100px;
     padding: 40px;
+    /* position: relative; */
 }
+
+.icon-image img {
+    height: 100px;
+    margin: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 .headline {
     /* background-color: cadetblue; */
@@ -202,4 +216,14 @@ button:hover {
 }
 
 
+/* ********** DESKTOP ************** */
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .left-floating-box, .right-floating-box {
+        display: flex;
+   
+    }
+}
 
